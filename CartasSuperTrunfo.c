@@ -23,9 +23,10 @@ int main() {
   int numero_pontos_turisticos1;
   int numero_pontos_turisticos2;
 
-  // Área para entrada de dados
-      
+  // Área para entrada de dados 
   // entrada de dados da carta #1
+
+
       printf("Digite o estado da carta 1 ('A' a 'H'):\n");
       scanf("%s", estado1); // lê o estado da carta #1 
 
@@ -51,7 +52,9 @@ int main() {
       scanf("%d", &numero_pontos_turisticos1); // lê o número de pontos turísticos da cidade #1
 
       printf("\n\n\n");
-
+      
+      
+      // 
       // entrada de dados da carta #2
         printf("Digite o estado da carta 2 ('A' a 'H'):\n");
         scanf("%s", estado2); // lê o estado da carta #2
@@ -97,8 +100,8 @@ printf("\n\n\n-- Carta 2 --\n"
         "Código: %s\n"
         "Nome da Cidade: %s\n"
         "População: %d habitantes\n"
-        "Área: %.2f\n"
-        "PIB: %.2f\n"
+        "Área: %.2f\n km²"
+        "PIB: %.2f\n bilhões de reais"
         "Número de Pontos Turísticos: %d\n",
       estado2, codigo_completo2, nome_cidade2, populacao2, area2, pib2, numero_pontos_turisticos2);
 
