@@ -22,6 +22,10 @@ int main() {
   float pib2;
   int numero_pontos_turisticos1;
   int numero_pontos_turisticos2;
+  float densidade_populacional1;
+  float densidade_populacional2;
+  float pib_per_capita1;
+  float pib_per_capita2;
 
   // Área para entrada de dados 
   // entrada de dados da carta #1
@@ -80,6 +84,18 @@ int main() {
         printf("Digite o número de pontos turísticos da cidade da carta 2:\n");
         scanf("%d", &numero_pontos_turisticos2); // lê o número de pontos turísticos da cidade da carta 2
 
+
+
+          // espaço para cálculo da densidade populacional e pib per capita da cidade da carta #1
+          densidade_populacional1 = (float)populacao1 / area1; 
+          pib_per_capita1 = pib1 * (1000000000) / (float)populacao1;
+
+          // espaço para cálculo da densidade populaiconal e pib per capita da cidade da carta #2
+          densidade_populacional2 = (float)populacao2 / area2;
+          pib_per_capita2 = pib2 * (1000000000) / (float)populacao2;
+
+
+
   // Área para exibição dos dados da cidade
 // exibição dos dados da carta #1
 
@@ -90,8 +106,10 @@ printf("\n-- Carta 1 --\n"
         "População: %d habitantes\n"
         "Área: %.2f km²\n"
         "PIB: %.2f bilhões de reais\n"
-        "Número de Pontos Turísticos: %d\n",
-        estado1, codigo_completo1, nome_cidade1, populacao1, area1, pib1, numero_pontos_turisticos1);
+        "Número de Pontos Turísticos: %d\n"
+        "Densidadde Populacional: %.2f hab\n"
+        "PIB per Capita: %.2f reais\n",
+        estado1, codigo_completo1, nome_cidade1, populacao1, area1, pib1, numero_pontos_turisticos1, densidade_populacional1, pib_per_capita1);
 
 // exibição dos dados da carta #2 
 
@@ -100,10 +118,12 @@ printf("\n\n\n-- Carta 2 --\n"
         "Código: %s\n"
         "Nome da Cidade: %s\n"
         "População: %d habitantes\n"
-        "Área: %.2f\n km²"
-        "PIB: %.2f\n bilhões de reais"
-        "Número de Pontos Turísticos: %d\n",
-      estado2, codigo_completo2, nome_cidade2, populacao2, area2, pib2, numero_pontos_turisticos2);
+        "Área: %.2f km²\n"
+        "PIB: %.2f bilhões de reais\n"
+        "Número de Pontos Turísticos: %d\n"
+        "Densidade Populacional: %.2f hab\n"
+        "PIB per Capita: %.2f reais\n",
+      estado2, codigo_completo2, nome_cidade2, populacao2, area2, pib2, numero_pontos_turisticos2, densidade_populacional2, pib_per_capita2);
 
 return 0;
 } 
